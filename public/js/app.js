@@ -28,9 +28,9 @@ function addMessage(text, sender) {
 async function sendMessage(message) {
 
     try {
-        //cambiar el localhost por la ruta relativa para que funcione en producción
+
         const response = await fetch(
-            "/api/chat",
+            "http://localhost:3000/api/chat",
             {
                 method: "POST",
 
@@ -90,14 +90,9 @@ chatForm.addEventListener("submit", async (event) => {
 // Nuevo chat
 newChatButton.addEventListener("click", () => {
     messagesContainer.innerHTML = `
-        <div class="welcome">
-            <div class="welcome-icon">✦</div>
-            <h2>¿En qué puedo ayudarte?</h2>
-            <p>
-                Escribí tu pregunta y comencemos
-                una conversación.
-            </p>
-        </div>
+                <div class="welcome">
+                    <h2>Descubre Gemini, tu asistente de IA<br>personal</h2>
+                </div>
     `;
 
     messageInput.focus();

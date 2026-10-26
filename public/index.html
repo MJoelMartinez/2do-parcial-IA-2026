@@ -4,39 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat IA</title>
+    <title>Google Gemini</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icon.png">
 </head>
 
 <body>
     <div class="app">
 
         <aside class="sidebar">
-            <h2>✦ Chat IA</h2>
-
+            <div id="contenedorIconito">
+                <img id="iconitoGemini" src="img/icon.png">
+                <h2>Gemini</h2>
+            </div>
+            
             <button id="new-chat" class="new-chat">
-                + Nuevo chat
+                + Nueva conversación
             </button>
 
-            <p class="sidebar-label">Tus conversaciones</p>
+            <p class="sidebar-label">Inicia sesión para guardar la<br>actividad</p>
 
             <div id="chat-history"></div>
-
-            <div class="sidebar-footer">
-                Proyecto de aprendizaje
-            </div>
         </aside>
 
         <main class="chat">
 
             <header class="chat-header">
-                <div class="avatar">✦</div>
-
-                <div>
-                    <h1>Asistente IA</h1>
-                    <span class="status">Tu asistente personal</span>
-                </div>
+                <label>Acerca de Gemini</label>
+                <label>Obtener aplicación Gemini</label>
+                <label>Suscripciones</label>
+                <label>Para empresas</label>
+                <label id="btnIniciarSesion">Iniciar sesión</label>
             </header>
 
             <section
@@ -45,38 +44,31 @@
                 aria-live="polite"
                 aria-label="Conversación"
             >
-                <div class="welcome">
-                    <div class="welcome-icon">✦</div>
+                
+                    <div class="welcome">
+                        <h2>Descubre Gemini, tu asistente de IA<br>personal</h2>
+                    </div>
 
-                    <h2>¿En qué puedo ayudarte?</h2>
-
-                    <p>
-                        Escribí tu pregunta y comencemos
-                        una conversación.
-                    </p>
-                </div>
             </section>
+                <form id="chat-form" class="chat-form">
+                        <label class="sr-only" for="message-input">
+                            Escribí tu mensaje
+                        </label>
 
-            <form id="chat-form" class="chat-form">
-                <label class="sr-only" for="message-input">
-                    Escribí tu mensaje
-                </label>
+                        <input
+                            type="text"
+                            id="message-input"
+                            placeholder="Pregunta a Gemini"
+                            autocomplete="off"
+                            required
+                        >
 
-                <input
-                    type="text"
-                    id="message-input"
-                    placeholder="Escribí un mensaje..."
-                    autocomplete="off"
-                    required
-                >
-
-                <button type="submit" id="send-button">
-                    Enviar
-                </button>
-            </form>
-
+                        <button type="submit" id="send-button">
+                            ↑
+                        </button>
+                    </form>  
             <p class="disclaimer">
-                La IA puede cometer errores. Verificá la información.
+                Se aplican los Términos de Google y la Política de Privacidad de Google. Gemini es una IA y puede cometer errores.
             </p>
 
         </main>
