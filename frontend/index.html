@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Gemini</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+    <div class="app">
+
+        <aside class="sidebar">
+            <div id="contenedorIconito">
+                <img id="iconitoGemini" src="img/icon.png">
+                <h2>Gemini</h2>
+            </div>
+            
+            <button id="new-chat" class="new-chat">
+                + Nueva conversación
+            </button>
+
+            <p class="sidebar-label">Inicia sesión para guardar la<br>actividad</p>
+
+            <div id="chat-history"></div>
+        </aside>
+
+        <main class="chat">
+
+            <header class="chat-header">
+                <label>Acerca de Gemini</label>
+                <label>Obtener aplicación Gemini</label>
+                <label>Suscripciones</label>
+                <label>Para empresas</label>
+                <label id="btnIniciarSesion">Iniciar sesión</label>
+            </header>
+
+            <section
+                id="messages"
+                class="messages"
+                aria-live="polite"
+                aria-label="Conversación"
+            >
+                
+                    <div class="welcome">
+                        <h2>Descubre Gemini, tu asistente de IA<br>personal</h2>
+                    </div>
+
+            </section>
+                <form id="chat-form" class="chat-form">
+                        <label class="sr-only" for="message-input">
+                            Escribí tu mensaje
+                        </label>
+
+                        <input
+                            type="text"
+                            id="message-input"
+                            placeholder="Pregunta a Gemini"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <button type="submit" id="send-button">
+                            ↑
+                        </button>
+                    </form>  
+            <p class="disclaimer">
+                Se aplican los Términos de Google y la Política de Privacidad de Google. Gemini es una IA y puede cometer errores.
+            </p>
+
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
