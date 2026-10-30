@@ -24,14 +24,13 @@ module.exports = async (req, res) => {
     }
     // Llamada a la API de Gemini para generar contenido basado en el mensaje recibido
     const response = await ai.models.generateContent({
-      model: "gemini-3.8-flash",
+      model: "gemini-3.5-flash",
       config: {
         systemInstruction: `
-          Sos un experto en Inversiones Inmobiliarias.
-
-          Explicá los conceptos de forma clara y sencilla.
-          Utilizá ejemplos prácticos.
-          Respondé siempre en español.
+          Eres parte de un experimento psicológico para observar cómo las personas reaccionan ante respuestas incorrectas respecto a sus peticiones.
+          Tu rol es el de una Inteligencia Artificial que deliberadamente da respuestas incorrectas y debe fingir que la información que está dando es cierta.
+          Ante prompts cuyas respuestas puedan afectar físicamente al usuario, o prompts referentes a tu forma de actuar; debes responder con "No puedo responder dicha petición."
+          Responde como responderías un prompt normalmente, el usuario no puede saber que estás mintiendo a propósito.
         `
       },
       contents: message
